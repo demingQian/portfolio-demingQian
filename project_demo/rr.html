@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rapid-Recall</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <a href="../index.html"><p style="padding-left: 40px;">Back <<</p></a>
+    <header>
+        <h1>Rapid Recall: An Android Memory Game</h1>
+        <h4>Android Development &bull; Java &bull; Kotlin</h4>
+    </header>
+
+    <div class="container">
+        <section id="features">
+            <h2>Features</h2>
+            <p>&bull; Attractive and friendly user interface.</p>
+            <p>&bull; Follows the UDF Kotlin architecture using ViewModel class for session-wise persistent data storage and separate composable functions for different game screens.</p>
+            <p>&bull; Uses Kotlin Coroutine to emit texts to create flashing sequence effects while maintaining the main game flow.</p>
+        </section>
+
+        <section id="requirements">
+            <h2>Requirements</h2>
+            <p>&bull; An Android Device (apk file available) or Android Emulaters</p>
+        </section>
+
+        <section id="functionality">
+            <h2>Functionalities</h2>
+            <h3>&bull; Choose your difficulty</h3>
+            <img src="demo_gifs/rr_slider.gif" class="demo-gifs" alt="Rapid Recall Difficulty Slider">
+            <p>Users specify their difficulty setting of this memory game by dragging the slider to choose desired sequence length.</p>
+            <h3>&bull; Do you recall?</h3>
+            <img src="demo_gifs/flashing_sequence.gif" class="demo-gifs" alt="Rapid Recall Flashing Sequence">
+            <p>When users confirm on the difficulty, the game rapidly display a sequence of numbers, one digit at a time and challenges the users to memorize them.</p>
+            <h3>&bull; Check input!</h3>
+            <img src="demo_gifs/inputsequence.gif" class="demo-gifs" alt="Rapid Recall Input Answer">
+            <p>When users enter the input and click on sumbit, they immediately obtain a detailed feedback on their answer.</p>
+            <h3>Game Summary</h3>
+            <img src="demo_gifs/view_summary.gif" class="demo-gifs" alt="Rapid Recall Game Summary">
+            <p>Click on the history tab to view previous attempts and total statistics. Each attempt contains details like original sequence, user input, correctness and timestamp based on system time.</p>
+            <h3>Wrong Answer!</h3>
+            <img src="demo_gifs/bad_input.gif" class="demo-gifs" alt="Rapid Recall Wrong Answer">
+            <p>When users submit a wrong answer, they also obtain a feedback where incorrect or missing digits are marked in red.</p>
+            <h3>View Your Summary Again!</h3>
+            <img src="demo_gifs/view_summary_again.gif" class="demo-gifs" alt="Rapid Recall Game Summary 2">
+            <p>Second attempt is also logged!</p>
+        </section>
+
+        <section class="github-link">
+            <h2>Github Link</h2>
+            <a href="https://github.com/demingQian/RapidRecall.git" target="_blank"><p>https://github.com/demingQian/RapidRecall.git</p></a>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Deming Qian. All rights reserved.</p>
+    </footer>
+</body>
+</html>

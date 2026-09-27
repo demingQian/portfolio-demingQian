@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dog-vs-Cat</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <a href="../index.html"><p style="padding-left: 40px;">Back <<</p></a>
+    <header>
+        <h1>Dog vs. Cat Image Classification</h1>
+        <h4>Python &bull; Jupter Notebook &bull; Pytorch &bull; CNN &bull; Image Classification</h4>
+    </header>
+
+    <section class="container">
+        <section id="features">
+            <h2>Features</h2>
+            <p>&bull; Industrial standard pipeline using Pytorch DataLoader with customized batch size and train/validation/test data visualization.</p>
+            <p>&bull; Utilizes Pytorch nn.Module to create a custom convolutional neural network with configurable layers in the forward pass method; Pytorch BCEWithLogitsLoss() and Adam optimizer for model training.</p>
+            <p>&bull; Trains model on train data, for each epoch, test the model using validation data and record its performance; if it predicts better than the last epoch, then save the model; stop the training process when patience runs out.</p>
+        </section>
+
+        <section id="requirements">
+            <h2>Requirements</h2>
+            <p>&bull; Windows 10/11</p>
+            <p>&bull; Python 3.x</p>
+            <p>&bull; pip</p>
+        </section>
+
+        <section id="setup">
+            <h2>Setup</h2>
+            <p>Clone the repository and install all of the required packages with:</p>
+<pre class="command-or-code"><code>git clone https://github.com/demingQian/dog_vs_cat_image_classification.git
+cd dog_vs_cat_image_classification
+pip install requirements.txt -r</code></pre>
+            <p>Ensure you have a compatible Pytorch environment.</p>
+            <br>
+            <img src="demo_gifs/run_first_cell.gif" class="demo-gifs">
+            <p>Open file model_test.ipynb in jupyter notebook or other IDE and run the first cell.</p>
+        </section>
+
+        <section id="test">
+            <h2>Test the Model!</h2>
+            <p>Create a new cell and enter the following code:</p>
+<pre class="command-or-code"><code>predict_image({your/path/to/image})</code></pre>
+            <p>For example, the image path can be "imgs/cat1.jpg".</p>
+            <p>Run the cell and check the output!</p>
+
+            <h2>Detect Cats!</h2>
+            <img src="demo_gifs/predict_cats.gif" class="demo-gifs">
+
+            <h2>Detect Dogs!</h2>
+            <img src="demo_gifs/predict_dogs.gif" class="demo-gifs">
+        </section>
+
+        <section class="github-link">
+            <h2>Github Link</h2>
+            <a href="https://github.com/demingQian/dog_vs_cat_image_classification.git" target="_blank"><p>https://github.com/demingQian/dog_vs_cat_image_classification.git</p></a>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Deming Qian. All rights reserved.</p>
+    </footer>
+</body>
+</html>

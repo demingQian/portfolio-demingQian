@@ -3,9 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Phobicue-Jiong-View</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    
+    <a href="../index.html"><p style="padding-left: 40px;">Back <<</p></a>
+    <header>
+        <h1>Phobicue-Jiong-View Real-Time Visual Censor</h1>
+        <p>Python &bull; Ultralytics YOLO &bull; Object Detection &bull; PyQt6 &bull; python-opencv &bull; Pytorch</p>
+    </header>
+
+    <div class="container">
+        <section id="features">
+            <h2>Features</h2>
+            <p>&bull; Utilizes python PyQt6 to create a user friendly, interactive window with configurable censorship options, such as customized mask images, detection strictness and detection frequency.</p>
+            <p>&bull; Obscures detected regions while maintaining user interactions on the original window, using several window APIs.</p>
+            <p>&bull; Customizable YOLO model files for different user experiences.</p>
+            <p>&bull; Allows GPU acceleration by integrating Pytorch.</p>
+        </section>
+
+        <section id="requirements">
+            <h2>Requirements</h2>
+            <p>&bull; Windows 10/11</p>
+            <p>&bull; Python 3.x</p>
+            <p>&bull; pip</p>
+            <p>&bull; A trained Ultralytics YOLO Model is recommended.</p>
+            <p>&bull; A compatible NVIDIA GPU is recommended, but the application can also run on CPU.</p>
+        </section>
+
+        <section id="setup">
+            <h2>Setup & Pre-launching</h2>
+            <h3>1. Clone & Install</h3>
+            <p>To set up Phobicue-Jiong-View visual censor, first ensure you have the required environment and packages. Clone the repository and install the required Python packages:
+<pre class="command-or-code"><code>git clone https://github.com/demingQian/Phobicue-Jiong-View.git
+cd Phobicue-Jiong-View
+pip install -r requirements.txt</code></pre>
+            Also, make sure you have a compatible Pytorch environment (Pytorch with CUDA GPU acceleration is recommended, but the app also runs on CPU).
+            </p>
+            <h3>2. Run Pre-Launcher</h3>
+            <img src="demo_gifs/pjv_setup.gif" class="demo-gifs" alt="Setup Phobicue-Jiong-View">
+            1. Run the application in the environment with required packages. When you see a small window pops up, the prelauncher is ready.<br><br>2. Open a window, for example, if you want to work with Google Chrome (like in my case), you can rename the Google Chrome window to "Chrome" or any other names as long as it does not conflict with already existing window names. Then enter the name into the first field (The app also works on other window names). After that, you can drag the target window down so that it submerges under your screen (but don't minimize it!). <b>It is recommended to adjust your window to a desired size before launching the main program, as changing original window size when the app is running is prone to cause an error.</b><br><br>3. Enter your Ultralytics YOLO model name. Make sure you already have a trained Ultralytics YOLO model in the Phobicue-Jiong-View folder and enter the correct model file name with ".pt" file extension. If you simply want to test the program, you can enter the name of an already existing, trained default YOLO model (eg. yolo26m.pt) and it will download automatically.<br><br>4. If nothing goes wrong, the launcher will hide itself and you can see the main application window popping up. You are ready to experience the program!</p>
+        </section>
+
+        <section id="functionality">
+            <h2>Functionalities</h2>
+            <h3>&bull; User Interactions</h3>
+            <img src="demo_gifs/user_interaction.gif" class="demo-gifs" alt="Phobicue-Jiong-View User Interactions">
+            <p>Although the application creates a new window which replicates the original window, you can still use your cursor to interact with the original window! Simply treat the application window as your original window, then click and drag whenever and wherever you wish!<br><br>Besides basic cursor functionality, you can also type into the original window, by simply clicking on the textfields in the application window and typing on your keyboard!<br><br>Although scrolling is not possible with your mouse scroll, you can press up or down arrow key on your keyboard to scroll up or down.</p>
+            <h3>&bull; Mask Options</h3>
+            <img src="demo_gifs/mask_options.gif" class="demo-gifs" alt="Phobicue-Jiong-View Mask Options">
+            <p>The application allows user to customize how their censorships should look like when the app is running:</p>
+            <p class="indented-detail">&bull; Disabled: Disables video censorship.<br>
+            &bull; Black: The default censorship method. Offers the best performance when running.<br>
+            &bull; Blur: Blurs the detected region. <br>
+            &bull; Custom Image: The application randomly chooses from the images in the "custom_images" folder to apply to detected regions (ignore my alien cat lol)
+            </p>
+            <h3>&bull; Detection Strictness</h3>
+            <img src="demo_gifs/detection_strictness.gif" class="demo-gifs" alt="Phobicue-Jiong-View Detection Strictness">
+            <p>The application allows user to choose how strict the detection should be:</p>
+            <p class="indented-detail">&bull; Loose: Detection is loose. The application will flag even the slightest suspicions (false detection may occur).<br>
+            &bull; Normal: The default detection strictness.<br>
+            &bull; Strict: The application reports less detection with higher accuracy, at the cost of potential ineffective censorships.<br>
+            &bull; Very Confident: The application only reports detection only if the model is very confident with the detection.
+            </p>
+            <h3>&bull; Detection Frequency</h3>
+            <img src="demo_gifs/detection_frequency.gif" class="demo-gifs" alt="Phobicue-Jiong-View Detection Frequency">
+            <p>The application allows user to choose how frequent the application detects every frame:</p>
+            <p class="indented-detail">The recommended option is "Every Frame", which guarantees to censor any detections in any frames as long as the model can detect them. However, too frequent detection may introduce devastating performance issue. Thus, users can choose the app to detect less frequently, at a cost of potential ineffective censorship when the video has rapidly changing frames. The force-detection mechanism forces the app to detect everytime the user interacts with the window, regardless of the current detection frequency setting.</p>
+            <h3>&bull; Exiting the Program</h3>
+            <p class="indented-detail">The application offers multiple methods to safely exit the program, by clikcing the "Quit" option under the "Phobicue" menu tab or by clicking the "x" button on the top right corner of the window.</p>
+        </section>
+
+        <section class="github-link">
+            <h2>Github Link</h2>
+            <a href="https://github.com/demingQian/Phobicue-Jiong-View.git"  target="_blank"><p>https://github.com/demingQian/Phobicue-Jiong-View.git</p></a>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Deming Qian. All rights reserved.</p>
+    </footer>
 </body>
 </html>

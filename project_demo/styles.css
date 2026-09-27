@@ -43,13 +43,21 @@ footer {
     padding: 2rem;
     color: #777;
 }
-.link2project {
-    font-size: 0.75rem;
+.demo-gifs {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
+}
+.command-or-code {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 15px 40px 15px 40px;
+    border-radius: 15px;
+    background-color: #e1debe;
 }
 .indented-detail {
     padding-left: 40px;
-}
-textarea {
-  width: 100%;
-  margin: 0 auto;
 }
